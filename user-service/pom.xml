@@ -18,6 +18,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+		<dependency>
+		    <groupId>org.springframework.kafka</groupId>
+		    <artifactId>spring-kafka</artifactId>
+		</dependency>
+
+
         <!-- Lombok (isteğe bağlı) -->
         <dependency>
             <groupId>org.projectlombok</groupId>

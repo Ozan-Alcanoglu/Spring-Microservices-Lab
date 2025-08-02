@@ -3,3 +3,7 @@ server:
 spring:
   application:
     name: product-service
+  kafka:
+    bootstrap-servers: localhost:9092
+    
+     
