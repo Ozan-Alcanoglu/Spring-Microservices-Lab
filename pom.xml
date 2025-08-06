@@ -71,5 +71,6 @@
 	<modules>
 		<module>user-service</module>
 		<module>product-service</module>
+		<module>eureka-server</module>
 	</modules>
 </project>
