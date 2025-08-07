@@ -73,5 +73,6 @@
 		<module>product-service</module>
 		<module>eureka-server</module>
 		<module>config-server</module>
+		<module>geteway-service</module>
 	</modules>
 </project>
