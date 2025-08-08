@@ -7,10 +7,12 @@ import feign_demo.kafka.ProductKafkaProducer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api/products")
 public class ProductController {
 
     private final UserClient userClient;
@@ -21,7 +23,7 @@ public class ProductController {
         this.producer= producer;
     }
 
-    @GetMapping("/products")
+    @GetMapping("/productss")
     public String getProducts() {
         return "Product list from product-service. Users: " + userClient.getUsers();
     }
@@ -36,5 +38,10 @@ public class ProductController {
     public String sendProductToKafka(@RequestBody Product product) {
         producer.sendProduct(product);
         return "Product sent to Kafka!";
+    }
+    
+    @GetMapping("/users")
+    public String getUsersFromUserService() {
+        return userClient.getUsers();
     }
 }
