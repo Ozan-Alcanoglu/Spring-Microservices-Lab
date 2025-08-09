@@ -1,8 +1,10 @@
 	package feign_demo.controller;
 
+import feign_demo.concretes.ProductService;
 import feign_demo.entitiy.Product;
 import feign_demo.feign.UserClient;
 import feign_demo.kafka.ProductKafkaProducer;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,10 +19,12 @@ public class ProductController {
 
     private final UserClient userClient;
     private final ProductKafkaProducer producer;
+    private final ProductService productService;
 
-    public ProductController(UserClient userClient, ProductKafkaProducer producer) {
+    public ProductController(UserClient userClient, ProductKafkaProducer producer,ProductService productService) {
         this.userClient = userClient;
         this.producer= producer;
+        this.productService=productService;
     }
 
     @GetMapping("/productss")
@@ -42,6 +46,7 @@ public class ProductController {
     
     @GetMapping("/users")
     public String getUsersFromUserService() {
-        return userClient.getUsers();
+        return productService.getUsersFromUserService();
     }
+
 }
