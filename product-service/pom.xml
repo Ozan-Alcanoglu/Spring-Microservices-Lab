@@ -61,7 +61,11 @@
 		  <artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 		<!-- Feign ile Resilience4J entegrasyonu için -->
-		
+		<dependency>
+		    <groupId>io.github.resilience4j</groupId>
+		    <artifactId>resilience4j-micrometer</artifactId>
+		    <version>2.2.0</version> <!-- Projenizdeki Resilience4j versiyonuyla uyumlu olanı seçin -->
+		</dependency>
 
         <!-- Lombok (isteğe bağlı) -->
         <dependency>
