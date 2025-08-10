@@ -32,6 +32,11 @@ public class ProductController {
         return "Product list from product-service. Users: " + userClient.getUsers();
     }
     
+    @GetMapping("/test-api")
+    public String getTestMessage() {
+    	return "This is a product-service-api";
+    }
+    
     @GetMapping("/send")
     public String sendKafkaMessage(@RequestParam String message) {
         producer.sendMessage(message);
