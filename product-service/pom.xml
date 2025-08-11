@@ -67,6 +67,11 @@
 		    <version>2.2.0</version> <!-- Projenizdeki Resilience4j versiyonuyla uyumlu olanı seçin -->
 		</dependency>
 
+		<dependency>
+		    <groupId>io.micrometer</groupId>
+		    <artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+
         <!-- Lombok (isteğe bağlı) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
