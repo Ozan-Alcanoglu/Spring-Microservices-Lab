@@ -9,3 +9,10 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+logging:
+  file:
+    name: ./logs/eureka-server/eureka-server.log
+  level:
+    root: INFO
+  pattern:
+    console: '{"time":"%d{yyyy-MM-dd HH:mm:ss}", "level":"%p", "service":"${spring.application.name}", "message":"%m"}%n'

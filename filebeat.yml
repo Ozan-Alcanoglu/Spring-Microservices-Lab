@@ -1,0 +1,12 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /logs/user-service/*.log
+      - /logs/product-service/*.log
+      - /logs/geteway-service/*.log
+      - /logs/eureka-server/*.log
+      - /logs/config-server/*.log
+  
+output.logstash:
+    hosts: ["logstash:5000"]

@@ -11,3 +11,10 @@ spring:
           uri: https://github.com/Ozan-Alcanoglu/config-repo
           clone-on-start: true
           default-label: main
+logging:
+  file:
+    name: ./logs/config-server/config-server.log
+  level:
+    root: INFO
+  pattern:
+    console: '{"time":"%d{yyyy-MM-dd HH:mm:ss}", "level":"%p", "service":"${spring.application.name}", "message":"%m"}%n'
