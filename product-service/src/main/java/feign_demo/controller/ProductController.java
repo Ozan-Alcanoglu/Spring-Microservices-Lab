@@ -1,4 +1,4 @@
-	package feign_demo.controller;
+package feign_demo.controller;
 
 import feign_demo.concretes.ProductService;
 import feign_demo.entitiy.Product;

@@ -74,5 +74,6 @@
 		<module>eureka-server</module>
 		<module>config-server</module>
 		<module>geteway-service</module>
+		<module>auth-service</module>
 	</modules>
 </project>

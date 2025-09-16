@@ -18,6 +18,11 @@ spring:
           uri: lb://product-service
           predicates:
             - Path=/api/products/**
+       
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+          - Path=/api/auth/**
 
     discovery:
       locator:
